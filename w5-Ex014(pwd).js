@@ -22,6 +22,7 @@ Semua manipulasi string (changeVocals, reverseWord, setLowerUpperCase, removeSpa
 
 //A
 function changeVocals(str) {
+
   var temp = "";
   var object = {
     a: "b",
@@ -89,14 +90,21 @@ function removeSpaces(str) {
 
 //E
 function passwordGenerator(name) {
+
+    if(name.length < 5) { 
+        return "Minimal karakter yang diinputkan adalah 5 karakter"
+    }
+
     var change = changeVocals(name)
     var reverse = reverseWord(change)
     var setCase = setLowerUpperCase(reverse)
     var remove = removeSpaces(setCase)
     return remove
 }
-
+//TEST CASE
 console.log(passwordGenerator("Sergei Dragunov")); // 'VPNVGBRdJFGRFs'
 console.log(passwordGenerator("Dimitri Wahyudiputra")); // 'BRTVPJDVYHBwJRTJMJd'
 console.log(passwordGenerator("Alexei")); // 'JFXFLb'
 console.log(passwordGenerator("Alex")); // 'Minimal karakter yang diinputkan adalah 5 karakter'
+
+

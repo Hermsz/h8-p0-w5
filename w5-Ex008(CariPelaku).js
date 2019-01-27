@@ -8,7 +8,9 @@ Diberikan sebuah function cariPelaku(kalimat) yang menerima satu parameter berup
 
 
 function cariPelaku(str) {
-  // you can only write your code here!
+
+  return str.match(/abc+/g).length
+  
 }
 
 // TEST CASES

@@ -8,9 +8,10 @@ Diberikan sebuah function hapusSimbol(str) yang menerima satu parameter berupa s
 */
 
 function hapusSimbol(str) {
-  // you can only write your code here!
-}
 
+  return str.replace(/[^\w]/gi, '')
+  
+}
 // TEST CASES
 console.log(hapusSimbol('test%$4aa')); // test4aa
 console.log(hapusSimbol('devel0p3r s3j@@ati')); // devel0p3rs3jati
